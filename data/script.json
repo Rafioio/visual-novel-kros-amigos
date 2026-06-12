@@ -1,0 +1,845 @@
+{
+    "casa1": {
+        "text": "Estou tão nervoso para o primeiro dia de aula...",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "casa2"
+    },
+    "casa2": {
+        "text": "Nova escola, novas pessoas. Espero não estragar tudo.",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "parque_encontro"
+    },
+    "parque_encontro": {
+        "text": "No caminho pelo parque, Bibi esbarra em mim correndo.",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_feliz",
+        "choices": [
+            {
+                "text": "Cumprimentar Bibi",
+                "next_scene_id": "parque_feliz",
+                "stat_changes": {
+                    "Bibi": 1
+                }
+            },
+            {
+                "text": "Ignorar e desviar o olhar",
+                "next_scene_id": "parque_ignora",
+                "stat_changes": {
+                    "Bibi": -1
+                }
+            }
+        ]
+    },
+    "parque_feliz": {
+        "text": "Eu sorri de volta. Comecei o dia muito bem!",
+        "background_key": "bg_parque",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "bibi_pensa_feliz"
+    },
+    "bibi_pensa_feliz": {
+        "text": "(Bibi pensa): Que menino bonitinho...",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "escola_intro"
+    },
+    "parque_ignora": {
+        "text": "Que vergonha... Por que eu não falou nada com ela?",
+        "background_key": "bg_parque",
+        "character_sprite": "kros_corando",
+        "next_scene_id": "bibi_pensa_raiva"
+    },
+    "bibi_pensa_raiva": {
+        "text": "(Bibi pensa): Qual era a do Kros? Esquisito.",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_raiva",
+        "next_scene_id": "escola_intro"
+    },
+    "escola_intro": {
+        "text": "Cheguei! Não posso me atrasar para a aula do Mr White.",
+        "background_key": "bg_corredor",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "escola_corredor"
+    },
+    "escola_corredor": {
+        "text": "No corredor, trombo com Lily e seus livros caem.",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_triste",
+        "choices": [
+            {
+                "text": "Ajudar a recolher os livros",
+                "next_scene_id": "escola_ajuda",
+                "stat_changes": {
+                    "Lily": 1
+                }
+            },
+            {
+                "text": "Xingar Lily pela lerdeza",
+                "next_scene_id": "escola_xinga",
+                "stat_changes": {
+                    "Lily": -1
+                }
+            }
+        ]
+    },
+    "escola_ajuda": {
+        "text": "'Obrigada, qual é seu nome?', ela diz sorrindo.",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_feliz",
+        "next_scene_id": "escola_ajuda_resp"
+    },
+    "escola_ajuda_resp": {
+        "text": "'É... É Kros', respondo timidamente.",
+        "background_key": "bg_corredor",
+        "character_sprite": "kros_corando",
+        "next_scene_id": "aula"
+    },
+    "escola_xinga": {
+        "text": "'Tinha que ficar na minha frente para me atrasar?!'",
+        "background_key": "bg_corredor",
+        "character_sprite": "kros_raiva",
+        "next_scene_id": "escola_xinga_resp"
+    },
+    "escola_xinga_resp": {
+        "text": "Ela começa a chorar muito. 'Por que me tratou assim?!'",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_triste",
+        "next_scene_id": "aula"
+    },
+    "aula": {
+        "text": "O dia passou devagar. Estudei muito e agora vou para casa.",
+        "background_key": "bg_sala",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "rua_lola"
+    },
+    "rua_lola": {
+        "text": "Acho aquela menina elegante... Ops, ela me chamou de perdedor!",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_raiva",
+        "choices": [
+            {
+                "text": "Ficar triste e sair chorando",
+                "next_scene_id": "lola_chora",
+                "stat_changes": {
+                    "Lola": -1
+                }
+            },
+            {
+                "text": "Ficar com raiva e xingar ela de volta",
+                "next_scene_id": "lola_xinga",
+                "stat_changes": {
+                    "Lola": 1
+                }
+            },
+            {
+                "text": "Apenas ignorar e continuar andando",
+                "next_scene_id": "lola_ignora",
+                "stat_changes": {
+                    "Lola": -1
+                }
+            }
+        ]
+    },
+    "lola_chora": {
+        "text": "Ela ri da minha cara e me chama de chorão...",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "transicao_sono_d1"
+    },
+    "lola_xinga": {
+        "text": "Ela se assusta, mas sorri de canto. Deixei ela curiosa.",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_corando",
+        "next_scene_id": "transicao_sono_d1"
+    },
+    "lola_ignora": {
+        "text": "Ela grita xingamentos enquanto eu vou embora em silêncio.",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_raiva",
+        "next_scene_id": "transicao_sono_d1"
+    },
+    "transicao_sono_d1": {
+        "text": "Chego em casa exausto. Caio na cama e apago...",
+        "background_key": "bg_preto",
+        "character_sprite": null,
+        "next_scene_id": "dia2_manha"
+    },
+    "dia2_manha": {
+        "text": "Acordo mais calmo e decido ir pelo parque.",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "dia2_parque"
+    },
+    "dia2_parque": {
+        "text": "Vejo Bibi com a roupa da academia. 'Kros, como chama o aparelho de correr?'",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_feliz",
+        "choices": [
+            {
+                "text": "É a esteira.",
+                "next_scene_id": "d2_bibi_acertou",
+                "stat_changes": {
+                    "Bibi": 1
+                }
+            },
+            {
+                "text": "Acho que é o supino.",
+                "next_scene_id": "d2_bibi_errou",
+                "stat_changes": {
+                    "Bibi": -1
+                }
+            }
+        ]
+    },
+    "d2_bibi_acertou": {
+        "text": "Ela sorri: 'Isso! Vou lá fazer meu cardio agora.'",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "ROTEAR_DIA2_LILY"
+    },
+    "d2_bibi_errou": {
+        "text": "Ela me olha estranho: 'Supino é pra peito, Kros. Esquece.'",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_raiva",
+        "next_scene_id": "ROTEAR_DIA2_LILY"
+    },
+    "dia2_lily_raiva": {
+        "text": "No corredor, Lily me vê, fecha a cara e se afasta.",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_raiva",
+        "next_scene_id": "dia2_aula"
+    },
+    "dia2_lily_conversa": {
+        "text": "Encontro Lily. 'Oi Kros! Você também gosta de livros?'",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_feliz",
+        "choices": [
+            {
+                "text": "Sim, adoro ler!",
+                "next_scene_id": "d2_lily_feliz",
+                "stat_changes": {
+                    "Lily": 1
+                }
+            },
+            {
+                "text": "Não, acho chato.",
+                "next_scene_id": "d2_lily_triste",
+                "stat_changes": {
+                    "Lily": -1
+                }
+            }
+        ]
+    },
+    "d2_lily_feliz": {
+        "text": "'Que legal! Depois a gente conversa sobre fantasia!', ela diz.",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_feliz",
+        "next_scene_id": "dia2_aula"
+    },
+    "d2_lily_triste": {
+        "text": "'Ah... entendi.', ela diz, visivelmente chateada.",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_triste",
+        "next_scene_id": "dia2_aula"
+    },
+    "dia2_aula": {
+        "text": "As aulas do dia acabam e vou caminhando de volta para casa.",
+        "background_key": "bg_sala",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "ROTEAR_DIA2_LOLA"
+    },
+    "dia2_lola_conversa": {
+        "text": "Lola puxa assunto: 'Kros, o que acha de camisas de botão?'",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_corando",
+        "choices": [
+            {
+                "text": "Acho estilosas e deixam o visual arrumado.",
+                "next_scene_id": "d2_lola_acerto",
+                "stat_changes": {
+                    "Lola": 1
+                }
+            },
+            {
+                "text": "Acho horrível, prefiro usar pijama para sair.",
+                "next_scene_id": "d2_lola_erro",
+                "stat_changes": {
+                    "Lola": -1
+                }
+            }
+        ]
+    },
+    "d2_lola_acerto": {
+        "text": "Ela sorri: 'Você tem bom gosto. Podíamos fazer compras juntos.'",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_feliz",
+        "next_scene_id": "transicao_sono_d2"
+    },
+    "d2_lola_erro": {
+        "text": "Ela faz cara de nojo: 'Credo, você é esquisito.'",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_raiva",
+        "next_scene_id": "transicao_sono_d2"
+    },
+    "dia2_lola_bobao": {
+        "text": "Lola passa direto por mim: 'Sai da frente, menino bobão!'",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_raiva",
+        "next_scene_id": "d2_lola_chora"
+    },
+    "d2_lola_chora": {
+        "text": "Não sei o que fiz de errado. Vou para casa chorar...",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "transicao_sono_d2"
+    },
+    "transicao_sono_d2": {
+        "text": "Vou dormir e torcer para o dia seguinte ser tranquilo...",
+        "background_key": "bg_preto",
+        "character_sprite": null,
+        "next_scene_id": "dia3_manha"
+    },
+    "dia3_manha": {
+        "text": "O Terceiro dia começa. Hoje algo me diz que será diferente.",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "ROTEAR_DIA3_BIBI"
+    },
+    "d3_bibi_inicio": {
+        "text": "Fui na academia e contei à Bibi sobre meu 'histórico de atleta' (mentira).",
+        "background_key": "bg_academia",
+        "character_sprite": "bibi_feliz",
+        "choices": [
+            {
+                "text": "Tentar fazer 10 repetições no supino inclinado",
+                "next_scene_id": "d3_bibi_acerto",
+                "stat_changes": {
+                    "Bibi": 1
+                }
+            },
+            {
+                "text": "Deixar o halter cair e perder Aura",
+                "next_scene_id": "d3_bibi_erro",
+                "stat_changes": {
+                    "Bibi": -1
+                }
+            }
+        ]
+    },
+    "d3_bibi_acerto": {
+        "text": "Consegui levantar! Ela ficou impressionada.",
+        "background_key": "bg_academia",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "ROTEAR_DIA3_LILY"
+    },
+    "d3_bibi_erro": {
+        "text": "O peso caiu no chão com estrondo. Ela riu da minha cara.",
+        "background_key": "bg_academia",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "ROTEAR_DIA3_LILY"
+    },
+    "d3_lily_inicio": {
+        "text": "Fui à biblioteca. Lily falava de literatura. 'Leria comigo?'",
+        "background_key": "bg_biblioteca",
+        "character_sprite": "lily_feliz",
+        "choices": [
+            {
+                "text": "Sim, claro, tudo com você seria mais legal",
+                "next_scene_id": "d3_lily_acerto",
+                "stat_changes": {
+                    "Lily": 1
+                }
+            },
+            {
+                "text": "Não, ficar lendo é perda de tempo.",
+                "next_scene_id": "d3_lily_erro",
+                "stat_changes": {
+                    "Lily": -1
+                }
+            }
+        ]
+    },
+    "d3_lily_acerto": {
+        "text": "Ela corou violentamente e sorriu timidamente.",
+        "background_key": "bg_biblioteca",
+        "character_sprite": "lily_corando",
+        "next_scene_id": "ROTEAR_DIA3_LOLA"
+    },
+    "d3_lily_erro": {
+        "text": "Ela fechou o livro e me olhou decepcionada.",
+        "background_key": "bg_biblioteca",
+        "character_sprite": "lily_triste",
+        "next_scene_id": "ROTEAR_DIA3_LOLA"
+    },
+    "d3_lola_inicio": {
+        "text": "Lola: 'Pensava que você era bobão, mas é legal. Desculpa por antes.'",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_feliz",
+        "next_scene_id": "d3_lola_resp"
+    },
+    "d3_lola_resp": {
+        "text": "Kros: 'Sou meio tímido, mas tento meu melhor para ser agradável.'",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "d3_lola_pergunta"
+    },
+    "d3_lola_pergunta": {
+        "text": "Lola me olha curiosa: 'Você sairia com meninas mais velhas?'",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_corando",
+        "choices": [
+            {
+                "text": "Sim, eu acho muito legal",
+                "next_scene_id": "d3_lola_acerto",
+                "stat_changes": {
+                    "Lola": 1
+                }
+            },
+            {
+                "text": "Não, sou muito imaturo",
+                "next_scene_id": "d3_lola_erro",
+                "stat_changes": {
+                    "Lola": -1
+                }
+            }
+        ]
+    },
+    "d3_lola_acerto": {
+        "text": "Ela ficou totalmente sem graça. Acho que acertei em cheio.",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_corando",
+        "next_scene_id": "transicao_sono_d3"
+    },
+    "d3_lola_erro": {
+        "text": "Ela suspirou e pareceu triste com a resposta.",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_triste",
+        "next_scene_id": "transicao_sono_d3"
+    },
+    "transicao_sono_d3": {
+        "text": "Vou dormir. Amanhã teremos eventos especiais para quem eu me aproximei.",
+        "background_key": "bg_preto",
+        "character_sprite": null,
+        "next_scene_id": "VERIFICAR_EVENTOS_ESPECIAIS"
+    },
+    "ddlc_inicio": {
+        "text": "Lily me chamou para a sala do Clube de Literatura...",
+        "background_key": "bg_clube",
+        "character_sprite": "lily_feliz",
+        "next_scene_id": "ddlc_monologo"
+    },
+    "ddlc_monologo": {
+        "text": "Lily: 'Eu sei que você ignorou as outras. Fez muito bem. Elas não te merecem.'",
+        "background_key": "bg_clube",
+        "character_sprite": "lily_yandere_feliz",
+        "next_scene_id": "ddlc_glitch"
+    },
+    "ddlc_glitch": {
+        "text": "J U S T   L I L Y .",
+        "background_key": "bg_clube",
+        "character_sprite": "lily_yandere_corando",
+        "choices": [
+            {
+                "text": "Just Lily.",
+                "next_scene_id": "end_ddlc"
+            },
+            {
+                "text": "Just Lily.",
+                "next_scene_id": "end_ddlc"
+            },
+            {
+                "text": "Just Lily.",
+                "next_scene_id": "end_ddlc"
+            }
+        ]
+    },
+    "fnaf_inicio": {
+        "text": "Fui com a Lola na Pizzaria Fazbear. 'Isso me parece muito familiar...', eu digo.",
+        "background_key": "bg_pizzaria",
+        "character_sprite": "lola_triste",
+        "next_scene_id": "fnaf_conversa"
+    },
+    "fnaf_conversa": {
+        "text": "Lola tenta disfarçar, meio sem graça. 'Familiar? Que bobagem, Kros...'",
+        "background_key": "bg_pizzaria",
+        "character_sprite": "lola_corando",
+        "next_scene_id": "fnaf_jumpscare"
+    },
+    "fnaf_jumpscare": {
+        "text": "De repente, as luzes apagam...",
+        "background_key": "bg_jumpscare",
+        "character_sprite": null,
+        "next_scene_id": "end_fnaf"
+    },
+    "bibi_praia_1": {
+        "text": "Bibi me convidou para ir à praia no fim de semana por sermos amigos de infância.",
+        "background_key": "bg_praia",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "bibi_praia_2"
+    },
+    "bibi_praia_2": {
+        "text": "Bibi: 'Kros, lembra de quando você tinha 10 anos e gorfou no meio da sala de aula?'",
+        "background_key": "bg_praia",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "bibi_praia_3"
+    },
+    "bibi_praia_3": {
+        "text": "Kros: 'Poxa, Bibi... Não precisava desenterrar isso justo agora!', respondo envergonhado.",
+        "background_key": "bg_praia",
+        "character_sprite": "kros_corando",
+        "next_scene_id": "bibi_praia_4"
+    },
+    "bibi_praia_4": {
+        "text": "Bibi ri alto. 'Mas eu também lembro de como brincávamos todos os dias quando crianças.'",
+        "background_key": "bg_praia",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "bibi_praia_5"
+    },
+    "bibi_praia_5": {
+        "text": "Vemos uma banca alugando barcos a motor. Resolvemos fazer um passeio em alto mar!",
+        "background_key": "bg_praia",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "bibi_barco_1"
+    },
+    "bibi_barco_1": {
+        "text": "Estamos navegando em alto mar. A brisa está maravilhosa e o papo está ótimo.",
+        "background_key": "bg_mar",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "bibi_barco_2"
+    },
+    "bibi_barco_2": {
+        "text": "De repente, o céu fecha por completo. Uma tempestade violenta começa e o mar ruge!",
+        "background_key": "bg_mar_monstro",
+        "character_sprite": "bibi_triste",
+        "next_scene_id": "bibi_monstro_choice1"
+    },
+    "bibi_monstro_choice1": {
+        "text": "UM MONSTRO MARINHO GIGANTE SURGE DAS PROFUNDEZAS! O que fazer imediatamente?!",
+        "background_key": "bg_mar_monstro",
+        "character_sprite": "bibi_triste",
+        "choices": [
+            {
+                "text": "Girar o leme bruscamente para a direita e acelerar",
+                "next_scene_id": "bibi_monstro_choice2"
+            },
+            {
+                "text": "Pular na água para tentar distrair a criatura",
+                "next_scene_id": "end_monster"
+            }
+        ]
+    },
+    "bibi_monstro_choice2": {
+        "text": "Desviamo-nos por pouco de um tentáculo colossal! A criatura prepara outro bote certeiro!",
+        "background_key": "bg_mar_monstro",
+        "character_sprite": "bibi_triste",
+        "choices": [
+            {
+                "text": "Pegar o sinalizador de emergência e atirar nos olhos do monstro",
+                "next_scene_id": "bibi_monstro_sucesso"
+            },
+            {
+                "text": "Tentar ligar o rádio para pedir socorro à guarda costeira",
+                "next_scene_id": "end_monster"
+            }
+        ]
+    },
+    "bibi_monstro_sucesso": {
+        "text": "O sinalizador explode nos olhos da besta! Ela urra de dor e submerge. Conseguimos fugir!",
+        "background_key": "bg_mar",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "end_bibi_hero"
+    },
+    "d4_sozinho": {
+        "text": "Não criei vínculo com ninguém... Fiquei no quarto jogando sozinho.",
+        "background_key": "bg_quarto",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "AVALIAR_FINAIS"
+    },
+    "ev_especial_lily": {
+        "text": "Encontro Lily no laboratório lendo e-books e fóruns de fantasia.",
+        "background_key": "bg_lab",
+        "character_sprite": "lily_feliz",
+        "next_scene_id": "ev_lily_pergunta"
+    },
+    "ev_lily_pergunta": {
+        "text": "Lily: 'Kros, no Senhor dos Anéis, quem destrói o Um Anel no final?'",
+        "background_key": "bg_lab",
+        "character_sprite": "lily_corando",
+        "choices": [
+            {
+                "text": "O Gollum, que cai na lava com o Anel.",
+                "next_scene_id": "ev_lily_acerto",
+                "stat_changes": {
+                    "Lily": 1
+                }
+            },
+            {
+                "text": "O Gandalf, usando um feitiço de fogo.",
+                "next_scene_id": "ev_lily_erro",
+                "stat_changes": {
+                    "Lily": -1
+                }
+            }
+        ]
+    },
+    "ev_lily_acerto": {
+        "text": "Lily sorri largamente: 'Isso mesmo! Você entende de fantasia.'",
+        "background_key": "bg_lab",
+        "character_sprite": "lily_feliz",
+        "next_scene_id": "PROXIMO_EVENTO_ESPECIAL"
+    },
+    "ev_lily_erro": {
+        "text": "Ela suspira. 'Você definitivamente não leu os livros...'",
+        "background_key": "bg_lab",
+        "character_sprite": "lily_triste",
+        "next_scene_id": "PROXIMO_EVENTO_ESPECIAL"
+    },
+    "ev_especial_bibi": {
+        "text": "Fui com a Bibi ao cinema assistir a um filme de artes marciais.",
+        "background_key": "bg_cinema",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "ev_bibi_pergunta"
+    },
+    "ev_bibi_pergunta": {
+        "text": "Bibi: 'Ei Kros! Qual golpe ele usou para nocautear o vilão agora?'",
+        "background_key": "bg_cinema",
+        "character_sprite": "bibi_feliz",
+        "choices": [
+            {
+                "text": "Foi um chute alto giratório na cabeça.",
+                "next_scene_id": "ev_bibi_acerto",
+                "stat_changes": {
+                    "Bibi": 1
+                }
+            },
+            {
+                "text": "Ele atirou com uma arma de laser.",
+                "next_scene_id": "ev_bibi_erro",
+                "stat_changes": {
+                    "Bibi": -1
+                }
+            }
+        ]
+    },
+    "ev_bibi_acerto": {
+        "text": "Ela bate na minha mão: 'Boa! Você prestou atenção na técnica!'",
+        "background_key": "bg_cinema",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "PROXIMO_EVENTO_ESPECIAL"
+    },
+    "ev_bibi_erro": {
+        "text": "Ela faz uma careta. 'Arma de laser num filme de Karatê? Que viagem é essa?'",
+        "background_key": "bg_cinema",
+        "character_sprite": "bibi_raiva",
+        "next_scene_id": "PROXIMO_EVENTO_ESPECIAL"
+    },
+    "ev_especial_lola": {
+        "text": "Encontro Lola na lanchonete, avaliando revistas de moda enquanto toma um milkshake.",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_feliz",
+        "next_scene_id": "ev_lola_pergunta"
+    },
+    "ev_lola_pergunta": {
+        "text": "Lola: 'Me diz com sinceridade, o que combina mais com um vestido preto básico?'",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_corando",
+        "choices": [
+            {
+                "text": "Acessórios prateados ou dourados.",
+                "next_scene_id": "ev_lola_acerto",
+                "stat_changes": {
+                    "Lola": 1
+                }
+            },
+            {
+                "text": "Uma bota de trilha suja de barro.",
+                "next_scene_id": "ev_lola_erro",
+                "stat_changes": {
+                    "Lola": -1
+                }
+            }
+        ]
+    },
+    "ev_lola_acerto": {
+        "text": "Ela dá um sorriso elegante. 'Você tem muito bom gosto.'",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_feliz",
+        "next_scene_id": "PROXIMO_EVENTO_ESPECIAL"
+    },
+    "ev_lola_erro": {
+        "text": "Ela revira os olhos horrorizada. 'Credo, Kros! Que mau gosto!'",
+        "background_key": "bg_lanchonete",
+        "character_sprite": "lola_raiva",
+        "next_scene_id": "PROXIMO_EVENTO_ESPECIAL"
+    },
+    "isekai_atropelamento": {
+        "text": "Estou caminhando distraído, indo em direção à escola para o dia final...",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "isekai_atropelamento_2"
+    },
+    "isekai_atropelamento_2": {
+        "text": "UM CAMINHÃO EM ALTA VELOCIDADE SURGE DO NADA! Cuidado, Kros!!!",
+        "background_key": "bg_rua",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "isekai_atropelamento_impacto"
+    },
+    "isekai_atropelamento_impacto": {
+        "text": "* BAM * ... Tudo fica escuro.",
+        "background_key": "bg_preto",
+        "character_sprite": null,
+        "next_scene_id": "isekai_spawn"
+    },
+    "isekai_spawn": {
+        "text": "Sentindo o corpo leve, abro os olhos devagar... Onde raios eu estou?!",
+        "background_key": "bg_isekai",
+        "character_sprite": null,
+        "next_scene_id": "isekai_monologo"
+    },
+    "isekai_monologo": {
+        "text": "Arquitetura medieval, castelos flutuantes e céus mágicos. Eu fui de fato Isekaiado?!",
+        "background_key": "bg_isekai",
+        "character_sprite": null,
+        "next_scene_id": "isekai_encontro"
+    },
+    "isekai_encontro": {
+        "text": "Uma linda garota de cabelos prateados e vestes púrpuras corre até mim preocupada.",
+        "background_key": "bg_isekai",
+        "character_sprite": "emilia_feliz",
+        "next_scene_id": "isekai_conversa_1"
+    },
+    "isekai_conversa_1": {
+        "text": "Aria: 'Você caiu daquela fenda de luz! Está ferido? Qual seu nome?'",
+        "background_key": "bg_isekai",
+        "character_sprite": "emilia_feliz",
+        "next_scene_id": "isekai_conversa_2"
+    },
+    "isekai_conversa_2": {
+        "text": "Kros: 'Eu... acho que estou bem. Sou o Kros. Onde estamos?'",
+        "background_key": "bg_isekai",
+        "character_sprite": "kros_corando",
+        "next_scene_id": "isekai_conversa_3"
+    },
+    "isekai_conversa_3": {
+        "text": "Aria estende a mão com um sorriso acolhedor. 'Bem-vindo a Lugnica, Kros. Vamos juntos!'",
+        "background_key": "bg_isekai",
+        "character_sprite": "emilia_feliz",
+        "next_scene_id": "end_isekai"
+    },
+    "final_mr_white": {
+        "text": "Chego muito atrasado na sala de química. O professor me encara.",
+        "background_key": "bg_sala",
+        "character_sprite": "white_raiva",
+        "next_scene_id": "f_white2"
+    },
+    "f_white2": {
+        "text": "'Por que do atraso?', ele pergunta sério.",
+        "background_key": "bg_sala",
+        "character_sprite": "white_raiva",
+        "next_scene_id": "f_white3"
+    },
+    "f_white3": {
+        "text": "'Houve um imprevisto, senhor...', tento explicar.",
+        "background_key": "bg_sala",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "f_white4"
+    },
+    "f_white4": {
+        "text": "Ele me corta friamente. 'Você sabe quem eu sou?'",
+        "background_key": "bg_sala",
+        "character_sprite": "white_raiva",
+        "next_scene_id": "f_white_corta"
+    },
+    "f_white_corta": {
+        "text": "Eu abro a boca para responder, mas...",
+        "background_key": "bg_sala",
+        "character_sprite": "kros_feliz",
+        "next_scene_id": "f_white5"
+    },
+    "f_white5": {
+        "text": "'Say my name...'",
+        "background_key": "bg_sala",
+        "character_sprite": "white_raiva",
+        "next_scene_id": "f_white6"
+    },
+    "f_white6": {
+        "text": "'You're Heisenberg.', respondo tremendo.",
+        "background_key": "bg_sala",
+        "character_sprite": "kros_triste",
+        "next_scene_id": "end_breaking_bad"
+    },
+    "final_namoro_Lola": {
+        "text": "Lola me esperou na porta da escola. Acabamos namorando!",
+        "background_key": "bg_rua",
+        "character_sprite": "lola_feliz",
+        "next_scene_id": "end_lola"
+    },
+    "final_namoro_Bibi": {
+        "text": "Bibi me convidou para correr. Acabamos namorando!",
+        "background_key": "bg_parque",
+        "character_sprite": "bibi_feliz",
+        "next_scene_id": "end_bibi"
+    },
+    "final_namoro_Lily": {
+        "text": "Lily me chamou para estudar. Acabamos namorando!",
+        "background_key": "bg_corredor",
+        "character_sprite": "lily_feliz",
+        "next_scene_id": "end_lily"
+    },
+    "final_harem_escolha": {
+        "text": "As meninas se reuniram no parque! Quem eu devo escolher?",
+        "background_key": "bg_parque",
+        "character_sprite": "kros_corando"
+    },
+    "end_breaking_bad": {
+        "text": "BREAKING BAD ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_lola": {
+        "text": "PURPLE LOVE ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_bibi": {
+        "text": "SPORTS ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_lily": {
+        "text": "BOOK ENJOYER ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_harem_king": {
+        "text": "HAREM KING ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_ddlc": {
+        "text": "LITERATURE CLUB ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_fnaf": {
+        "text": "PURPLE GUY ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_monster": {
+        "text": "EATEN BY A MONSTER ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_bibi_hero": {
+        "text": "SAVING YOUR LOVER ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    },
+    "end_isekai": {
+        "text": "ISEKAI ENDING",
+        "background_key": "bg_preto",
+        "is_ending": true
+    }
+}
