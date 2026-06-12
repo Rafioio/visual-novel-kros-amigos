@@ -3,11 +3,13 @@ import sys
 from core.engine import GameEngine
 from core.asset_manager import AssetManager
 from core.menu import MainMenu
+from core.audio_manager import tocar_musica
 
 pygame.init()
 LARGURA, ALTURA = 800, 600
 tela = pygame.display.set_mode((LARGURA, ALTURA))
 pygame.display.set_caption("Visual Novel - Kros & Amigos")
+
 
 menu = MainMenu(LARGURA, ALTURA)
 estado_jogo = "menu"
@@ -67,10 +69,11 @@ while rodando:
         if evento.type == pygame.QUIT:
             rodando = False
         if estado_jogo == "menu":
-
+            tocar_musica("assets/audio/menu.mp3", 0.2)
             resultado = menu.update(evento)
 
             if resultado == "Iniciar":
+                tocar_musica("assets/audio/game.mp3", 0.2)
                 estado_jogo = "jogo"
 
             elif resultado == "Sair":
@@ -107,6 +110,7 @@ while rodando:
     if cena_atual:
 
         if estado_jogo == "menu":
+
             menu.draw(tela)
         elif estado_jogo == "jogo":
             bg_img = assets.get_image(cena_atual.background_key)

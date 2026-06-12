@@ -1,4 +1,6 @@
 import pygame
+from core.creditos import iniciar_creditos
+
 
 class MainMenu:
 
@@ -17,42 +19,44 @@ class MainMenu:
         self.fonte_opcoes = pygame.font.SysFont(None, 40)
 
         self.background = pygame.image.load("assets/menu/menu.png")
-
         self.background = pygame.transform.scale(
             self.background,
             (largura, altura)
         )
 
     def update(self, evento):
+
         if evento.type == pygame.KEYDOWN:
+
             if evento.key == pygame.K_1:
-                self.opcao_selecionada = 0
                 return "Iniciar"
 
             elif evento.key == pygame.K_2:
-                self.opcao_selecionada = 1
-                return "Créditos"
+                iniciar_creditos()
 
             elif evento.key == pygame.K_3:
-                self.opcao_selecionada = 2
                 return "Sair"
 
         return None
 
-
     def draw(self, tela):
 
-        tela.blit(self.background, (0, 0))
+        altura_barra = 100
 
-        titulo = self.fonte_titulo.render(
-            "Kros & Amigos",
-            True,
-            (255, 255, 255)
+        background_redimensionado = pygame.transform.scale(
+            self.background,
+            (self.largura, self.altura - altura_barra)
         )
 
-        tela.blit(titulo, (180, 120))
+        tela.blit(background_redimensionado, (0, 0))
 
-        y = 300
+        # barra preta embaixo
+        barra = pygame.Surface((self.largura, 100), pygame.SRCALPHA)
+        barra.fill((0, 0, 0, 180))
+        tela.blit(barra, (0, self.altura - 100))
+
+        # opções lado a lado
+        textos = []
 
         for i, opcao in enumerate(self.opcoes):
 
@@ -62,6 +66,16 @@ class MainMenu:
                 (255, 255, 255)
             )
 
-            tela.blit(texto, (320, y))
+            textos.append(texto)
 
-            y += 60
+        largura_total = (
+            sum(t.get_width() for t in textos)
+            + 80 * (len(textos) - 1)
+        )
+
+        x = (self.largura - largura_total) // 2
+        y = self.altura - 65
+
+        for texto in textos:
+            tela.blit(texto, (x, y))
+            x += texto.get_width() + 80
